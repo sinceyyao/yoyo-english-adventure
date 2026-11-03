@@ -1,13 +1,13 @@
 # Yoyo's English Adventure
 
-面向5～6岁儿童的英语启蒙 H5/PWA。当前已发布基线 **Sky Explorer V1.0**，本地正在分阶段开发V1.1，主题为 Wonders GK Unit 8 Week 3。第一阶段供 Yoyo 家庭使用。
+面向5～6岁儿童的英语启蒙 H5/PWA。当前代码基线 **Sky Explorer V1.0**，本地已完成V1.1实现，待真实设备与发布验收，主题为 Wonders GK Unit 8 Week 3。第一阶段供 Yoyo 家庭使用。
 
 ## 文档导航
 
 - [PRODUCT.md](PRODUCT.md)：产品目标、已实现功能、数据结构和问题分析。
 - [ROADMAP.md](ROADMAP.md)：版本规划、模块化建议和验收标准。
 
-基线分析日期：2026-11-03。当前开发分支：`feature/sky-ui-v1.1`。V1.1已落地基础存储保护、语音服务、自动读题/手动重播、错误不揭示答案、第三关完整句子及PWA更新机制；统一插画和全页面视觉尚未完成。没有推送、合并或部署。V1.0历史行为见PRODUCT.md；本轮证据见[artifacts/VERIFICATION.md](artifacts/VERIFICATION.md)。
+基线分析日期：2026-11-03。当前开发分支：`feature/sky-ui-v1.1`。V1.1已落地基础存储保护、语音服务、自动读题/手动重播、错误不揭示答案、第三关完整句子及PWA更新机制；20张原创插画和六个页面的统一视觉已完成本地实现与回归。真实iPhone与线上发布仍待验收。没有推送、合并或部署。V1.0历史行为见PRODUCT.md；本轮证据见[artifacts/VERIFICATION.md](artifacts/VERIFICATION.md)。
 
 ## 技术与文件结构
 
@@ -16,7 +16,8 @@
 ```text
 index.html             页面入口与服务状态区域
 styles/app.css         原有样式、共享变量与服务反馈
-src/app.js             词表、题库、状态、渲染及交互
+src/app.js             词表、题库、状态、渲染及事件委托
+assets/illustrations/  20张独立原创透明WebP词图
 src/services/          存储、语音与PWA更新服务
 assets/icons/          安装图标
 tests/regression.cjs   Node逻辑回归（不依赖第三方包）
@@ -81,7 +82,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 | --- | --- |
 | 相对路径 | Manifest `start_url: ./index.html`、`scope: ./`、图标与 SW 相对引用兼容项目子路径 |
 | SW 作用域 | 注册根目录sw.js；安全上下文可用；限制同项目子路径；失败显示在线学习提示 |
-| 离线资源 | 预缓存入口、样式、3个服务、应用脚本、Manifest和图标；语音离线取决于设备 |
+| 离线资源 | 预缓存入口、样式、3个服务、应用脚本、Manifest、图标和20张词图；语音离线取决于设备 |
 | 更新 | 项目版本缓存，只查当前版本；激活清理本项旧缓存；不得删除localStorage或其他应用缓存 |
 | 生命周期 | 新版本等待接受，Quiz中阻止更新操作；从V1.0首次升级，旧页面没有更新提示，需关闭本项目所有旧标签/独立窗口后重开，让等待的SW激活，不需要清学习数据 |
 | 安装图标 | 192/512 PNG、独立maskable及Apple touch icon已生成；真实设备裁切仍待验收 |
@@ -90,7 +91,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 当前验证范围
 
-`node tests/regression.cjs`：12组逻辑回归通过，覆盖词序、答案映射、20词浏览、12/12及11/12计分、完成一次、防误泄答案、存储备份保护、语音队列与SW作用域/升级桩测试。
+`node tests/regression.cjs`：14组逻辑回归通过，覆盖词序、答案映射、20词浏览、12/12及11/12计分、完成一次、防误泄答案、存储备份保护、语音队列与SW作用域/升级桩测试。
 
 内置桌面浏览器375×667：实际通关12题，先错后对为11/12和92%；自动播放出现开始状态、重试不揭示答案。截图和后续核对结果见[验证记录](artifacts/VERIFICATION.md)。不能据此宣称已通过真实iPhone、安装或线上部署验证。
 
@@ -100,3 +101,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 - [MDN：Service Worker 使用与缓存生命周期](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [MDN：PWA 安装条件](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - [MDN：SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+
+## V1.1视觉阶段验证
+
+20张独立透明WebP词图共691,200字节，六个页面视觉已统一。在本地项目子路径完成20词逐张加载及播放入口检查、12题两轮通关（11/12和12/12）、320/375/390px检查、刷新保留记录、接受更新及停服后离线重载。真实iPhone与线上Pages发布仍待验收。详细证据见[验证记录](artifacts/VERIFICATION.md)。
+
+正常预览仍为 <http://127.0.0.1:8000/>。若显示旧版，在Quiz之外接受“Update now”；不要清除学习记录。8002端口只是离线测试服务，已主动停止。

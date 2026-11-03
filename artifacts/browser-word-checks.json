@@ -1,0 +1,162 @@
+[
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/sun.webp",
+    "width": 375,
+    "word": "sun"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/moon.webp",
+    "width": 375,
+    "word": "moon"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/star.webp",
+    "width": 375,
+    "word": "star"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/cloud.webp",
+    "width": 375,
+    "word": "cloud"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/rainbow.webp",
+    "width": 375,
+    "word": "rainbow"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/bird.webp",
+    "width": 375,
+    "word": "bird"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/airplane.webp",
+    "width": 375,
+    "word": "airplane"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/rain.webp",
+    "width": 375,
+    "word": "rain"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/kite.webp",
+    "width": 375,
+    "word": "kite"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/helicopter.webp",
+    "width": 375,
+    "word": "helicopter"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/rocket.webp",
+    "width": 375,
+    "word": "rocket"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/planet.webp",
+    "width": 375,
+    "word": "planet"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/hot-air-balloon.webp",
+    "width": 375,
+    "word": "hot air balloon"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/snow.webp",
+    "width": 375,
+    "word": "snow"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/lightning.webp",
+    "width": 375,
+    "word": "lightning"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/comet.webp",
+    "width": 375,
+    "word": "comet"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/satellite.webp",
+    "width": 375,
+    "word": "satellite"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/blimp.webp",
+    "width": 375,
+    "word": "blimp"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/aurora-borealis.webp",
+    "width": 375,
+    "word": "aurora borealis"
+  },
+  {
+    "loaded": true,
+    "nextClear": true,
+    "overflow": false,
+    "source": "./assets/illustrations/bat.webp",
+    "width": 375,
+    "word": "bat"
+  }
+]

@@ -3,8 +3,13 @@
   function start(isQuiz) {
     if (!('serviceWorker' in navigator) || !global.isSecureContext) return;
     const panel = document.getElementById('update-status');
-    let accepted = false;
-    function offer(worker) {
+    let accepted = false, waitingWorker = null, displayedWorker = null;
+    function drawOffer() {
+      if (!waitingWorker) return;
+      if (isQuiz()) {panel.textContent = ''; displayedWorker = null; return;}
+      if (displayedWorker === waitingWorker) return;
+      const worker = waitingWorker;
+      displayedWorker = worker;
       panel.textContent = 'A new version is ready. Update after your quiz.';
       const button = document.createElement('button');
       button.textContent = 'Update now';
@@ -19,6 +24,9 @@
       };
       panel.append(button);
     }
+    function offer(worker) {waitingWorker = worker; drawOffer();}
+    // App click delegation runs first, so view transitions can safely reveal a waiting update.
+    document.getElementById('root').addEventListener('click', drawOffer);
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (accepted) global.location.reload();
     });

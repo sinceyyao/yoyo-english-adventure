@@ -47,7 +47,7 @@ check('valid historical records stay unchanged across load/save and render',()=>
   const m=memory(JSON.stringify(old)),a=app(m);a.run("go('progress');go('review');save()");assert.deepEqual(JSON.parse(m.getItem('yoyo_sky_v1')),old);
 });
 check('invalid JSON and incomplete JSON recover only after original backup',()=>{
-  for(const raw of ['{bad','{}','null','{"seen":[0,99],"sessions":[],"misses":{"99":1}}']){
+  for(const raw of ['{bad','{}','null','{"seen":[],"sessions":[{"time":1e20,"score":5}],"misses":{}}','{"seen":[0,99],"sessions":[],"misses":{"99":1}}']){
     const m=memory(raw),a=app(m);assert.equal(m.getItem('yoyo_sky_v1'),raw);a.run('save()');assert([...m.values.entries()].some(([k,v])=>k.startsWith('yoyo_sky_v1_backup_')&&v===raw));assert(Array.isArray(JSON.parse(m.getItem('yoyo_sky_v1')).sessions));
   }
 });
@@ -63,18 +63,46 @@ check('speech sequence, cancellation and stale callbacks',()=>{
   assert.equal(a.run('played.length'),1);a.run('played[0].onend()');assert.equal(a.run('played[1].text'),'I can see the sun and clouds.');
   a.run('s.stop();played[1].onend()');assert.equal(a.run('played.length'),2);
 });
+check('all illustrations exist and rendered learning/quiz/review reference the correct assets',()=>{
+  const a=app();for(let id=0;id<20;id++){
+    const name=a.run(`illustrationNames[${id}]`);const file=`assets/illustrations/${name}.webp`;
+    assert(fs.existsSync(file),file);assert(fs.statSync(file).size<100000, file+' too large');
+    a.run(`filter=${id<8?'"core"':'"more"'};wordIndex=${id};go('learn')`);
+    assert(a.nodes.get('root').innerHTML.includes(file));
+    a.run(`data.misses[${id}]=1;go('review')`);assert(a.nodes.get('root').innerHTML.includes(file));
+  }
+  a.run('startQuiz()');for(let q=0;q<12;q++){
+    a.run(`qi=${q};selected=null;render()`);const markup=a.nodes.get('root').innerHTML;
+    for(const id of JSON.parse(a.run('JSON.stringify(quiz[qi].opts)'))){assert(markup.includes(a.run(`illustrationNames[${id}]`)+'.webp'));}
+    assert(!markup.includes('choiceText'));
+  }
+  a.run('qi=5;render()');assert(a.nodes.get('root').innerHTML.includes('cloud-pair'));
+});
+async function pwaChecks(){
+  let inQuiz=true, draw, reloads=0, controllerChange;
+  const panel={textContent:'',children:[],firstChild:{textContent:''},append(v){this.children.push(v)}};
+  const sent=[];const worker={postMessage:m=>sent.push(m)};
+  const registration={waiting:worker,addEventListener(){}};
+  const ctx={isSecureContext:true,location:{reload(){reloads++}},document:{getElementById:id=>id==='root'?{addEventListener:(name,fn)=>draw=fn}:panel,createElement:()=>({})},navigator:{serviceWorker:{controller:{},register:()=>Promise.resolve(registration),addEventListener:(name,fn)=>controllerChange=fn}}};
+  vm.createContext(ctx);vm.runInContext(fs.readFileSync('src/services/pwa.js','utf8'),ctx);ctx.YoyoPWA.start(()=>inQuiz);await Promise.resolve();
+  assert.equal(panel.textContent,'');assert.equal(panel.children.length,0);
+  inQuiz=false;draw();assert(panel.textContent.includes('new version'));assert.equal(panel.children[0].textContent,'Update now');
+  inQuiz=true;panel.children[0].onclick();assert.equal(sent.length,0);
+  inQuiz=false;panel.children[0].onclick();assert.equal(sent[0].type,'SKIP_WAITING');controllerChange();assert.equal(reloads,1);
+  checks++;console.log('PASS waiting update deferred during Quiz, shown on leaving, accepted explicitly before reload');
+}
 async function swChecks(){
   const events={}, deleted=[], calls=[], store=new Map();let skipped=0;
-  const caches={open:async key=>({addAll:async assets=>{for(const f of assets)assert(fs.existsSync(f));calls.push(assets)},match:async req=>store.get(key+req.url)}),keys:async()=>['yoyo-sky-v1','other-app-v1','yoyo-sky-v1.1-foundation-3'],delete:async key=>deleted.push(key)};
+  const caches={open:async key=>({addAll:async assets=>{for(const f of assets)assert(fs.existsSync(f));calls.push(assets)},match:async req=>store.get(key+req.url)}),keys:async()=>['yoyo-sky-v1','other-app-v1','yoyo-sky-v1.1-visual-4'],delete:async key=>deleted.push(key)};
   const ctx={URL,Response,caches,fetch:async()=>{throw Error('offline')},self:{registration:{scope:'https://example.com/yoyo-english-adventure/'},clients:{claim:async()=>{}},skipWaiting(){skipped++},addEventListener:(name,fn)=>events[name]=fn}};vm.createContext(ctx);vm.runInContext(fs.readFileSync('sw.js','utf8'),ctx);
   const dispatch=async name=>{let p;events[name]({waitUntil:v=>p=v});await p;};
-  await dispatch('install');assert.equal(calls[0].length,13);assert.equal(skipped,0);
+  await dispatch('install');assert.equal(calls[0].length,33);assert.equal(skipped,0);
   await dispatch('activate');assert.deepEqual(deleted,['yoyo-sky-v1']);events.message({data:{type:'SKIP_WAITING'}});assert.equal(skipped,1);
   let response;events.fetch({request:{method:'GET',url:'https://example.com/yoyo-english-adventure/missing.js'},respondWith:p=>response=p});assert.equal((await response).status,503);
-  store.set('yoyo-sky-v1.1-foundation-3https://example.com/yoyo-english-adventure/index.html',new Response('current'));
+  store.set('yoyo-sky-v1.1-visual-4https://example.com/yoyo-english-adventure/index.html',new Response('current'));
   events.fetch({request:{method:'GET',url:'https://example.com/yoyo-english-adventure/index.html'},respondWith:p=>response=p});assert.equal(await (await response).text(),'current');
   let intercepted=false;events.fetch({request:{method:'GET',url:'https://example.com/other-app/'},respondWith:()=>intercepted=true});assert.equal(intercepted,false);
   checks++;console.log('PASS SW precache paths, project-only cleanup/scope, waiting update, current cache, offline 503');
   const m=JSON.parse(fs.readFileSync('manifest.webmanifest'));for(const icon of m.icons)assert(fs.existsSync(icon.src));checks++;console.log('PASS manifest icon assets');
 }
-swChecks().then(()=>console.log(`${checks} regression groups passed. Browser/real-device tests remain separate.`)).catch(e=>{console.error(e);process.exitCode=1});
+pwaChecks().then(swChecks).then(()=>console.log(`${checks} regression groups passed. Browser/real-device tests remain separate.`)).catch(e=>{console.error(e);process.exitCode=1});

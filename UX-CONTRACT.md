@@ -14,3 +14,5 @@ Sources: PRODUCT.md (V1.0 semantics), user-confirmed V1.1-PLAN.md (changes). No 
 No custom modal, form, select, date picker, table or CRUD interface is introduced. Inline service messages use status regions, not browser alerts. They explain recovery without falsely claiming persistence or offline voice. The visual stage must keep feedback and button geometry stable, provide non-color feedback and respect reduced motion.
 
 Existing behavior for clicking the Quiz navigation restarts the round; adding a restart confirmation is an optional later change, not silently included in the foundation stage. Refresh restarts an incomplete round but preserves saved vocabulary, misses and completed sessions. No data deletion or reset action is added.
+
+Visual-stage behavior: art() shares all20 word images across views. Global voice status is visually hidden; per-view hints and feedback reserve space. Waiting updates stay hidden during Quiz and appear after leaving. Parents still see cumulative mistake counts. Level3 keeps complete sentences plus a target instruction.

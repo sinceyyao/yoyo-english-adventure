@@ -1,0 +1,142 @@
+[
+  {
+    "name": "sun",
+    "file": "assets/illustrations/sun.webp",
+    "sourceFile": "exec-52590dc7-ab4f-44bc-9a30-9fa4e01a9127.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "Use case: scientific-educational / children's picture-book illustration. Create ONE NEW isolated production flashcard illustration for Yoyo's English Adventure, ages 5–6. The attached board is STYLE REFERENCE ONLY: match its polished soft painted gouache texture, rounded clean silhouettes, sky-blue/lavender/warm-yellow palette, refined cartoon charm, no faces. Do NOT reproduce the board, cards, layout, letters or labels. Subject: A single golden yellow sun disc with short rounded rays, no face. Composition: square canvas, centered single subject fully visible, fills about 78% of canvas with generous clear edge margin. Real transparent background, no white rectangle, no shadow cast onto a surface, no scenery, no text, no watermark, no extra objects. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "moon",
+    "file": "assets/illustrations/moon.webp",
+    "sourceFile": "exec-68504c2c-8c02-4b5d-b6d0-3160b18c895b.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "Use case: scientific-educational / children's picture-book illustration. Create ONE NEW isolated production flashcard illustration for Yoyo's English Adventure, ages 5–6. The attached board is STYLE REFERENCE ONLY: match its polished soft painted gouache texture, rounded clean silhouettes, sky-blue/lavender/warm-yellow palette, refined cartoon charm, no faces. Do NOT reproduce the board, cards, layout, letters or labels. Subject: A single pale lavender crescent moon, no face or stars. Composition: square canvas, centered single subject fully visible, fills about 78% of canvas with generous clear edge margin. Real transparent background, no white rectangle, no shadow cast onto a surface, no scenery, no text, no watermark, no extra objects. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "star",
+    "file": "assets/illustrations/star.webp",
+    "sourceFile": "exec-2a9bd4d9-d792-4e1a-b67d-6842e75f6383.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "Use case: scientific-educational / children's picture-book illustration. Create ONE NEW isolated production flashcard illustration for Yoyo's English Adventure, ages 5–6. The attached board is STYLE REFERENCE ONLY: match its polished soft painted gouache texture, rounded clean silhouettes, sky-blue/lavender/warm-yellow palette, refined cartoon charm, no faces. Do NOT reproduce the board, cards, layout, letters or labels. Subject: A single warm yellow five-pointed celestial star, no face. Composition: square canvas, centered single subject fully visible, fills about 78% of canvas with generous clear edge margin. Real transparent background, no white rectangle, no shadow cast onto a surface, no scenery, no text, no watermark, no extra objects. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "cloud",
+    "file": "assets/illustrations/cloud.webp",
+    "sourceFile": "exec-5982cc2d-4976-42f2-92c3-a53c8c47b246.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "Use case: scientific-educational / children's picture-book illustration. Create ONE NEW isolated production flashcard illustration for Yoyo's English Adventure, ages 5–6. The attached board is STYLE REFERENCE ONLY: match its polished soft painted gouache texture, rounded clean silhouettes, sky-blue/lavender/warm-yellow palette, refined cartoon charm, no faces. Do NOT reproduce the board, cards, layout, letters or labels. Subject: One fluffy white cumulus cloud, with a visible delicate sky-blue outline so it is recognizable on white. Composition: square canvas, centered single subject fully visible, fills about 78% of canvas with generous clear edge margin. Real transparent background, no white rectangle, no shadow cast onto a surface, no scenery, no text, no watermark, no extra objects. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "rainbow",
+    "file": "assets/illustrations/rainbow.webp",
+    "sourceFile": "exec-4a98b83a-5acf-4218-886c-cd3b991fd6ea.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "Use case: scientific-educational / children's picture-book illustration. Create ONE NEW isolated production flashcard illustration for Yoyo's English Adventure, ages 5–6. The attached board is STYLE REFERENCE ONLY: match its polished soft painted gouache texture, rounded clean silhouettes, sky-blue/lavender/warm-yellow palette, refined cartoon charm, no faces. Do NOT reproduce the board, cards, layout, letters or labels. Subject: A complete clearly recognisable curved rainbow arch with seven pastel colour bands, no clouds. Composition: square canvas, centered single subject fully visible, fills about 78% of canvas with generous clear edge margin. Real transparent background, no white rectangle, no shadow cast onto a surface, no scenery, no text, no watermark, no extra objects. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "bird",
+    "file": "assets/illustrations/bird.webp",
+    "sourceFile": "exec-b4e2fe97-72b7-4b01-8869-ffeb1de5736e.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne small blue songbird in flight, clear beak, wings and tail, friendly natural eye but no human features. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "airplane",
+    "file": "assets/illustrations/airplane.webp",
+    "sourceFile": "exec-5124c7e8-9791-4702-9e17-38739c1e6fca.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "Use case: scientific-educational / children's picture-book illustration. Create ONE NEW isolated production flashcard illustration for Yoyo's English Adventure, ages 5–6. The attached board is STYLE REFERENCE ONLY: match its polished soft painted gouache texture, rounded clean silhouettes, sky-blue/lavender/warm-yellow palette, refined cartoon charm, no faces. Do NOT reproduce the board, cards, layout, letters or labels. Subject: One recognizable sky-blue and cream passenger airplane, clearly visible swept wings, a vertical tail fin, lavender trim and a row of small cabin windows, in a three-quarter side view. Square canvas, single fully visible airplane centered with 10% clear margin; same soft gouache picture-book finish as reference, not glossy 3D. Real transparent background, no clouds, letters, logos or text."
+  },
+  {
+    "name": "rain",
+    "file": "assets/illustrations/rain.webp",
+    "sourceFile": "exec-951f6c96-9adc-4d90-a13d-2bf06f176f0a.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne blue-white rain cloud with several distinct blue falling raindrops beneath it; not snow. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "kite",
+    "file": "assets/illustrations/kite.webp",
+    "sourceFile": "exec-d8de24d8-4295-4f6e-a456-01e958f42877.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne diamond-shaped lavender and yellow kite, crossed spars, a curving string and short ribbon bows, no hands. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "helicopter",
+    "file": "assets/illustrations/helicopter.webp",
+    "sourceFile": "exec-a1a318ed-41a8-4795-83e5-98936983433c.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne blue and lavender helicopter with an unmistakable long top rotor, tail rotor and landing skids, full side view. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "rocket",
+    "file": "assets/illustrations/rocket.webp",
+    "sourceFile": "exec-0dbbdc31-03ac-471f-b7c1-c17875a52fc6.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne upright sky-blue and cream space rocket with lavender fins, a round window and a small warm-yellow exhaust flame. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "planet",
+    "file": "assets/illustrations/planet.webp",
+    "sourceFile": "exec-65c158a9-38b9-4bb4-ac71-3fc6a4e32b75.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne spherical blue-lavender planet with a clear tilted pale-yellow ring encircling it, not a map of Earth. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "hot-air-balloon",
+    "file": "assets/illustrations/hot-air-balloon.webp",
+    "sourceFile": "exec-5a2ca16f-4afd-4c12-900e-f38873031da8.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne large round pastel striped hot air balloon with visible rope lines and a woven warm-brown basket, like the approved sample. NOT a horizontal airship. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "snow",
+    "file": "assets/illustrations/snow.webp",
+    "sourceFile": "exec-91080cc0-f845-4959-92f6-83df5486b0e1.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedThree clearly distinct light-blue six-armed snowflakes with small snow crystals, simple crisp recognizable silhouettes, not rain. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "lightning",
+    "file": "assets/illustrations/lightning.webp",
+    "sourceFile": "exec-ba10e405-19ec-4a8e-ad0e-417e5b4760ef.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne dramatic but friendly warm-yellow zig-zag lightning bolt outlined in pale lavender, no face, no cloud. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "comet",
+    "file": "assets/illustrations/comet.webp",
+    "sourceFile": "exec-a7cf041e-044e-41dc-9ddf-a3b0d2455c7b.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne small rounded glowing warm-yellow comet head followed by a long curved pale-blue and lavender tapering luminous tail, no star decorations. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "satellite",
+    "file": "assets/illustrations/satellite.webp",
+    "sourceFile": "exec-d2d9d2b1-4eb9-4ecd-9549-71f55d77813b.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne clearly man-made silver and lavender space satellite, central body, two blue rectangular solar-panel wings and a small dish antenna, no Earth or planet. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "blimp",
+    "file": "assets/illustrations/blimp.webp",
+    "sourceFile": "exec-a93314d0-12d7-474d-882e-fe55e97ffcb8.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne elongated HORIZONTAL cream and lavender blimp airship, long oval gas envelope, small gondola underneath, tail fins, like the approved sample. NOT a hot air balloon. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "aurora-borealis",
+    "file": "assets/illustrations/aurora-borealis.webp",
+    "sourceFile": "exec-aacf0ff8-e920-4112-aa6e-b163650021b4.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedA compact recognizable arcing curtain of softly glowing mint-green, lavender and blue northern lights against a SMALL indigo oval night-sky vignette with a few stars and tiny low mountain silhouettes. Vignette edges softly fade to transparency. No text. This word needs the minimal night-sky context for educational clarity. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  },
+  {
+    "name": "bat",
+    "file": "assets/illustrations/bat.webp",
+    "sourceFile": "exec-2d99b0a6-0679-4f92-bf16-18d338f09f36.png",
+    "method": "Built-in imagegen; approved board as style reference",
+    "prompt": "undefinedOne purple-brown bat flying with two clearly scalloped membranous wings, pointed ears and a small natural body, friendly but no human face, no vampire teeth. Distinct from a bird. Composition: square canvas, centered subject fully visible, fills about 78% of canvas with clear edge margin. Real transparent background except the minimal aurora vignette if requested; no white rectangle, no shadow cast on a surface, no scene clutter, no letters, text, label, border or watermark. Match the attached reference's soft gouache finish, not glossy 3D. Strong educational clarity at 100px thumbnail."
+  }
+]

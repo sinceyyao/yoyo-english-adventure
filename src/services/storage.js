@@ -9,7 +9,7 @@
     if (!object(value)) return empty();
     const seen = Array.isArray(value.seen) ? [...new Set(value.seen.filter(wordId))] : [];
     const sessions = Array.isArray(value.sessions) ? value.sessions.filter(s => object(s) &&
-      Number.isFinite(s.time) && s.time >= 0 && Number.isInteger(s.score) && s.score >= 0 && s.score <= 12) : [];
+      Number.isFinite(s.time) && s.time >= 0 && !Number.isNaN(new Date(s.time).getTime()) && Number.isInteger(s.score) && s.score >= 0 && s.score <= 12) : [];
     const misses = object(value.misses) ? Object.fromEntries(Object.entries(value.misses).filter(([id, count]) =>
       /^(0|[1-9]\d*)$/.test(id) && wordId(Number(id)) && Number.isInteger(count) && count >= 0)) : {};
     return {...value, seen, sessions, misses};

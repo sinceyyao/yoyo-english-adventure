@@ -1,0 +1,53 @@
+{
+  "previewServerStopped": true,
+  "offlineChecks": [
+    {
+      "loaded": true,
+      "word": "kite"
+    },
+    {
+      "loaded": true,
+      "word": "helicopter"
+    },
+    {
+      "loaded": true,
+      "word": "rocket"
+    },
+    {
+      "loaded": true,
+      "word": "planet"
+    },
+    {
+      "loaded": true,
+      "word": "hot air balloon"
+    },
+    {
+      "loaded": true,
+      "word": "snow"
+    },
+    {
+      "loaded": true,
+      "word": "lightning"
+    },
+    {
+      "loaded": true,
+      "word": "comet"
+    },
+    {
+      "loaded": true,
+      "word": "satellite"
+    },
+    {
+      "loaded": true,
+      "word": "blimp"
+    },
+    {
+      "loaded": true,
+      "word": "aurora borealis"
+    },
+    {
+      "loaded": true,
+      "word": "bat"
+    }
+  ]
+}
